@@ -1,0 +1,9 @@
+<ion-content>
+    <ion-list>
+        <div class="ion-text-center">
+            <h1>NOTICIAS</h1>
+        </div>
+
+        <app-news-card *ngFor="let newsItem  of newsDataSource |async ; index as i " [newsItem]="newsItem" (remove)="removeItem($event)"> </app-news-card>
+    </ion-list>
+</ion-content>

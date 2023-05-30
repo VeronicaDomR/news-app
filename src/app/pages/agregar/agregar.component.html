@@ -1,0 +1,35 @@
+<ion-content>
+    <div class="ion-text-center">
+        <h1>Add news</h1>
+    </div>
+    <form [formGroup]="newsFormGroup">
+        <ion-item>
+            <ion-input formControlName="title" label="Title" placeholder="Title"></ion-input>
+        </ion-item>
+
+        <ion-item>
+
+            <ion-datetime-button datetime="date"></ion-datetime-button>
+
+            <ion-modal [keepContentsMounted]="true">
+                <ng-template>
+                    <ion-datetime formControlName="publishedDate" presentation="date" id="date"></ion-datetime>
+                </ng-template>
+            </ion-modal>
+
+        </ion-item>
+
+        <ion-item>
+            <ion-input formControlName="description" label="Description" placeholder="Description"></ion-input>
+        </ion-item>
+
+        <ion-row>
+            <ion-col>
+                <ion-button expand="block" (click)="addNews()">Add</ion-button>
+            </ion-col>
+
+        </ion-row>
+
+    </form>
+
+</ion-content>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "news-app-b65c9": {
+      "hosting": {
+        "noticias-app": [
+          "news-app-b65c9"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "news-app-b65c9"
+  }
+}
