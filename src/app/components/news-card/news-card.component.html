@@ -1,0 +1,22 @@
+<ion-card color="light">
+    <img alt="Popocatepl" src="assets/img/1.jpg" />
+    <ion-card-header>
+        <ion-card-title>{{newsItem.title}}</ion-card-title>
+    </ion-card-header>
+
+    <div class="ion-text-justify">
+
+        <ion-card-content>{{newsItem.description}}</ion-card-content>
+    </div>
+    <ion-item>
+
+        <ion-datetime-button datetime="datetime"> </ion-datetime-button>
+        <ion-modal [keepContentsMounted]="true">
+            <ng-template>
+                <ion-datetime presentation="date" [value]="newsItem.date.toISOString()" id="datetime"></ion-datetime>
+            </ng-template>
+        </ion-modal>
+
+    </ion-item>
+</ion-card>
+<ion-button expand="block" (click)="removeHandler()">Delete</ion-button>
